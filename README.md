@@ -173,6 +173,7 @@ Par exemple, pour le thème:
 
 `Wordpress` utilise, comme dépendance, le SGBD `MariaDB`.  Les fichiers de MariaDB seront stockés dans le dossier `./volumes/bdwp`.
 
+👉 IMPORTANT: La dépendance doit-être testée avec la clé `healthcheck`.
 
 👉 NOTE: Les ressources pour construire (build) l'image de Wordpress seront placées dans le dossier `./wordpress`.
 
