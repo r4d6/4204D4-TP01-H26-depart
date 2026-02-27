@@ -107,7 +107,7 @@ include:
 
 💡NOTE: Le projet de départ est fonctionnel et propose déjà les services `Alpine` et `Pihole` via `Homepage`.
 
-👉 IMPORTANT, Si vous clonez le projet, dans le but de faire un push vers votre propre dépot, il est IMPORTANT de préserver le fichier  `.gitignore ` dans quoi, le contenu des dossiers volumes sera téléversé vers le dépôt.  Cela représente un important volume de données.
+👉 IMPORTANT, Si vous clonez le projet, dans le but de faire un push vers votre propre dépot, il est IMPORTANT de préserver le fichier  `.gitignore ` sans quoi, le contenu des dossiers volumes sera téléversé vers le dépôt.  Cela représente un important volume de données.
 
 ---
 
@@ -187,7 +187,7 @@ Il ne faut pas créer de dossier dans volumes, il faut plutôt utiliser un volum
 
 ## 7 - Directives de la remise du projet
 
-À déterminer ...
+Remise sur LÉA, **IMPORTANT**: sans le dossier `volumes`
 
 ---
 
@@ -286,4 +286,4 @@ edaa91d99561   lscr.io/linuxserver/qbittorrent:latest   "/init"                 
 ## Crédits
 
 *Document rédigé par Alain Boudreault, aka ve2cuy, © 2026*  
-*Version 2026.01.11.1*  
+*Version 2026.02.27.1*  
