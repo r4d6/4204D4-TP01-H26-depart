@@ -1,4 +1,4 @@
-# 420-4D4 : Projet 01 - Version 2026 
+# 420-4D4 : Projet 01 - Version H26.02
 
 ### Déploiement d'un système de complexité moyenne via Docker.
 
@@ -6,6 +6,11 @@
     <img src="./images/docker-logo-s.webp" alt="" width="300" />
 </p>
 
+
+## Date de remise: 
+
+## Groupe 101: 14 mars - 23:59
+## Groupe 102: 18 mars - 23:59
 
 ---
 
@@ -187,10 +192,15 @@ Il ne faut pas créer de dossier dans volumes, il faut plutôt utiliser un volum
 
 ## 7 - Directives de la remise du projet
 
-Remise sur LÉA, **IMPORTANT**: sans le dossier `volumes`
+* Remise via un dépot, **IMPORTANT** -> privé,  `GitHub`, avec invitation comme collaborateur pour `ve2cuy`. 
+
+* Remise sur LÉA, **IMPORTANT** -> sans le dossier `volumes`
+  * Un fichier zip du projet, 
+  * Avec un fichier lisezmoi.txt qui contient un lien vers le dépot github.
+  
 
 ---
-
+m, 
 ## 8 - Grille de correction
 
 À déterminer.
@@ -273,13 +283,6 @@ edaa91d99561   lscr.io/linuxserver/qbittorrent:latest   "/init"                 
 5aef2ec20aab   ghcr.io/getarcaneapp/arcane:latest       "./arcane"               3 hours ago    Up 6 minutes             0.0.0.0:3552->3552/tcp, [::]:3552->3552/           arcane
 5be5fd3defa0   nginx:latest                             "/docker-entrypoint.…"   3 hours ago    Up 6 minutes             0.0.0.0:100->80/tcp,    [::]:100->80/              nginx
 ```
-
----
-
-## 10 - Vidéo de démonstration du système
-
-À suivre ...
-
 
 ---
 
