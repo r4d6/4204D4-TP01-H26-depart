@@ -7,7 +7,7 @@
 </p>
 
 
-## Date de remise: 
+## Dates de remise: (temporaire)
 
 ## Groupe 101: 14 mars - 23:59
 ## Groupe 102: 18 mars - 23:59
@@ -174,6 +174,10 @@ Par exemple, pour le thème:
 `Wordpress` utilise, comme dépendance, le SGBD `MariaDB`.  Les fichiers de MariaDB seront stockés dans le dossier `./volumes/bdwp`.
 
 👉 IMPORTANT: La dépendance doit-être testée avec la clé `healthcheck`.
+
+* Indice: test: ["CMD", "mariadb-admin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+
+Réf.: [mariadb-admin](https://mariadb.com/docs/server/clients-and-utilities/administrative-tools/mariadb-admin)
 
 👉 NOTE: Les ressources pour construire (build) l'image de Wordpress seront placées dans le dossier `./wordpress`.
 
