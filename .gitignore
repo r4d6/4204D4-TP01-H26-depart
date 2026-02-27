@@ -1,3 +1,7 @@
+# Fichier .gitignore pour le projet de TP01
+# Attention, ne pas retirer de lignes de ce fichier
+# Au besoin, vous pouvez ajouter des fichiers ou dossiers à ignorer, mais ne pas retirer les lignes déjà présentes
+
 volumes/bdwp/*
 !volumes/bdwp/ne-pas-effacer.txt
 

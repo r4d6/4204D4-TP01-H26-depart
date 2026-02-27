@@ -1,6 +1,18 @@
-services:
+# ----------------------------------------------------------------------------------------------
+# Fichier:  init-dashboard.yml
+# Projet:   4204D4 H26 TP01
+# Auteur:   Alain Boudreault
+# Date:     2026.01.11
+# ----------------------------------------------------------------------------------------------
+# Gabarit de départ pour l'initialisation de la configuration du service Homepage
+# ----------------------------------------------------------------------------------------------
+# Mise à jour par: ()
+# Date de mise à jour: ()
+# Description de la mise à jour:  
+# ----------------------------------------------------------------------------------------------
 
-# Conteneur d'initialisation qui configure le menu de Homepage
+services:
+# Service d'initialisation de la configuration du service Homepage
   # Des exemples:
   # https://github.com/epoch-philosophy/homepage-example
   # Pour les icones: https://github.com/homarr-labs/dashboard-icons/tree/main/png
@@ -44,7 +56,7 @@ services:
                 # Voir la note dans le service pihole
                 url: https://${DNS_IP}
                 version: 6
-                # Il faut fournie un token API pour accéder aux statistiques
+                # Il faut fournir un token API pour accéder aux statistiques
                 # Voir dans l'application Pi-hole: Settings > API / Web interface 
                 key: ${PIHOLE_PASSWORD:-password} # password ou app password
 
