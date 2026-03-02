@@ -146,7 +146,7 @@ services:
 
 **💡IMPORTANT** -> TOUS les `ports` exposés des services doivent-être renseignés par une variables du fichiers `.env`. Il faut être en mesure de pouvoir changer les `ports`, ainsi que l'`adresse IP` du système, sans avoir à modifier les fichiers `yml` des services et de l'application `Homepage`. Même chose pour votre photo, le portefeuille d'actions, la langue d'affichage de Homepage, ...
 
-🛑 Lors de la correction, un fichier `.env` différent sera utilisé.
+🛑 Lors de la correction, un fichier `.env` différent pourrait utilisé.
 
 ---
 
