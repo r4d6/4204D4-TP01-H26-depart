@@ -1,4 +1,6 @@
 # Mot de passe initial pour Arcane: arcane / arcane-admin
+# openssl rand -base64 32   # ENCRYPTION_KEY
+# openssl rand -base64 32   # JWT_SECRET
 
 #services:
 #  arcane:

@@ -59,7 +59,17 @@ services:
                 # Il faut fournir un token API pour accéder aux statistiques
                 # Voir dans l'application Pi-hole: Settings > API / Web interface 
                 key: ${PIHOLE_PASSWORD:-password} # password ou app password
-
+      
+          - Accès à Portainer:
+              # https://gethomepage.dev/widgets/services/portainer/
+              icon: portainer.png
+              href: https://${HOST_IP}:9443
+              description: Interface d'administration Portainer
+              server: my-docker # The docker server that was configured
+              container: portainer # The name of the container you'd like to connect
+              showStats: false 
+              target: _self
+              
       EOF
       # FIN DU FICHIER services.yaml
       # ---------------------------------------------------------------------------
