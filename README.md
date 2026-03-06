@@ -181,6 +181,16 @@ Réf.: [mariadb-admin](https://mariadb.com/docs/server/clients-and-utilities/adm
 
 👉 NOTE: Les ressources pour construire (build) l'image de Wordpress seront placées dans le dossier `./wordpress`.
 
+
+Le `build` est lancé par le fichier `docker-compose.yml`.
+
+👉 Note: Pour renseigner le contexte du build:
+
+```yaml
+    build:
+      context: ../wordpress/
+```
+
 ---
 
 ## 6 - Nginx
