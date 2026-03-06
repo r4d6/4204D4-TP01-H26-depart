@@ -18,16 +18,16 @@
 
 ## 1 - Déployer, à partir d'images de conteneurs, les services (applications) suivants:
 
-* Arcane
-* Dockmon
+* [Arcane](https://getarcane.app/docs/setup/installation)
+* [Dockmon](https://github.com/darthnorse/dockmon)
 * MariaDB
 * PhpMyAdmin
 * Wordpress
 * Pihole
-* Portainer
-* qbitTorrent
-* Radarr
-* Uptime Kuma
+* [Portainer](https://hub.docker.com/r/portainer/portainer-ce) 
+* [qbitTorrent](https://hub.docker.com/r/linuxserver/qbittorrent/) 
+* [Radarr](https://github.com/hotio/radarr)
+* [Uptime Kuma](https://github.com/louislam/uptime-kuma)
 * Ngnix
 * Alpine
 
