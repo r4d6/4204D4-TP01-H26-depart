@@ -162,8 +162,7 @@ Un exemple est fourni avec le projet de départ, pour les services Pihole et Alp
 
 ## 5 - Wordpress
 
-Le service `Wordpress` doit être lancé à partir d'une image personnalisée qui propose le thème [simple-style](https://wordpress.org/themes/simple-style/) et l'extension (plugin) [
-EnlighterJS Syntax Highlighter](https://github.com/EnlighterJS). 
+Le service `Wordpress` doit être lancé à partir d'une image personnalisée qui propose le thème [simple-style](https://wordpress.org/themes/simple-style/) et l'extension (plugin) [code-prettify](https://github.com/kasparsd/code-prettify). 
 
 Par exemple, pour le thème:
 
