@@ -208,7 +208,15 @@ Il ne faut pas créer de dossier dans volumes, il faut plutôt utiliser un volum
 m, 
 ## 8 - Grille de correction
 
-À déterminer.
+* Respect du devis
+* Fonctionalité générale du projet
+* Création des fichiers de configuration de Homepage par un service `init`
+* Utilisation correcte du fichier .env
+* Utilisation de l'API Docker dans Homepage
+* Utilisation des APIs spécifiques dans Homepage
+* Image perso (build) pour Wordpress
+* Dépendances entre les services
+* Remise sur GitHub et LEA
 
 ---
 
