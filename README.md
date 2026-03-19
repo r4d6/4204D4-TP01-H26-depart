@@ -224,6 +224,7 @@ Il ne faut pas créer de dossier dans volumes, il faut plutôt utiliser un volum
 * Utilisation de l'API Docker dans Homepage
 * Utilisation des APIs spécifiques dans Homepage
 * Image perso (build) pour Wordpress
+* Création du fichier `index.html` de `nginx` avec un service `init`
 * Dépendances entre les services
 * Remise sur GitHub et LEA
 
