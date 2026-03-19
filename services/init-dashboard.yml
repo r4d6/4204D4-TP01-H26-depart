@@ -59,6 +59,7 @@ services:
                 # Il faut fournir un token API pour accéder aux statistiques
                 # Voir dans l'application Pi-hole: Settings > API / Web interface 
                 key: ${PIHOLE_PASSWORD:-password} # password ou app password
+      
 
       EOF
       # FIN DU FICHIER services.yaml

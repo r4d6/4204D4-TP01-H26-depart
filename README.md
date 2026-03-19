@@ -9,8 +9,8 @@
 
 ## Dates de remise: (temporaire)
 
-## Groupe 101: 14 mars - 23:59
-## Groupe 102: 18 mars - 23:59
+## Groupe 101: 17 mars - 23:59
+## Groupe 102: 22 mars - 23:59
 
 ---
 
@@ -18,16 +18,16 @@
 
 ## 1 - Déployer, à partir d'images de conteneurs, les services (applications) suivants:
 
-* Arcane
-* Dockmon
+* [Arcane](https://getarcane.app/docs/setup/installation)
+* [Dockmon](https://github.com/darthnorse/dockmon)
 * MariaDB
 * PhpMyAdmin
 * Wordpress
 * Pihole
-* Portainer
-* qbitTorrent
-* Radarr
-* Uptime Kuma
+* [Portainer](https://hub.docker.com/r/portainer/portainer-ce) 
+* [qbitTorrent](https://hub.docker.com/r/linuxserver/qbittorrent/) 
+* [Radarr](https://github.com/hotio/radarr)
+* [Uptime Kuma](https://github.com/louislam/uptime-kuma)
 * Ngnix
 * Alpine
 
@@ -146,7 +146,7 @@ services:
 
 **💡IMPORTANT** -> TOUS les `ports` exposés des services doivent-être renseignés par une variables du fichiers `.env`. Il faut être en mesure de pouvoir changer les `ports`, ainsi que l'`adresse IP` du système, sans avoir à modifier les fichiers `yml` des services et de l'application `Homepage`. Même chose pour votre photo, le portefeuille d'actions, la langue d'affichage de Homepage, ...
 
-🛑 Lors de la correction, un fichier `.env` différent sera utilisé.
+🛑 Lors de la correction, un fichier `.env` différent pourrait utilisé.
 
 ---
 
@@ -162,8 +162,7 @@ Un exemple est fourni avec le projet de départ, pour les services Pihole et Alp
 
 ## 5 - Wordpress
 
-Le service `Wordpress` doit être lancé à partir d'une image personnalisée qui propose le thème [simple-style](https://wordpress.org/themes/simple-style/) et l'extension (plugin) [
-EnlighterJS Syntax Highlighter](https://github.com/EnlighterJS). 
+Le service `Wordpress` doit être lancé à partir d'une image personnalisée qui propose le thème [simple-style](https://wordpress.org/themes/simple-style/) et l'extension (plugin) [code-prettify](https://github.com/kasparsd/code-prettify). 
 
 Par exemple, pour le thème:
 
@@ -180,6 +179,16 @@ Par exemple, pour le thème:
 Réf.: [mariadb-admin](https://mariadb.com/docs/server/clients-and-utilities/administrative-tools/mariadb-admin)
 
 👉 NOTE: Les ressources pour construire (build) l'image de Wordpress seront placées dans le dossier `./wordpress`.
+
+
+Le `build` est lancé par le fichier `docker-compose.yml`.
+
+👉 Note: Pour renseigner le contexte du build:
+
+```yaml
+    build:
+      context: ../wordpress/
+```
 
 ---
 
