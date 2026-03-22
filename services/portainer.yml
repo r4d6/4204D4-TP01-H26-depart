@@ -1,2 +1,11 @@
-#services:
-#  portainer:
+services:
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:sts
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ../volumes/portainer_data:/data
+    ports:
+      - ${PORTAINER_HTTP_PORT}:9000
+      - ${PORTAINER_HTTPS_PORT}:9443

@@ -4,21 +4,48 @@
 # WordPress et phpmyadmin dépendent de la base de données MariaDB
 # Le réseau reseauWP est utilisé pour isoler les services WordPress, phpmyadmin et MariaDB
 
-#services:
-#  mariadb:
-#    networks:
-#      - reseauWP
+services:
+  mariadb:
+    image: mariadb
+    networks:
+      - reseauWP
+    volumes:
+      - ../volumes/bdwp:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
   # <-------------------------------------- FIN
 
-#  wordpress:
-    #build:
-    #  context: 
-    #  dockerfile: 
-#    networks:
-#      - reseauWP
+  wordpress:
+    image: wordpress
+    build:
+      context: ../wordpress/
+      dockerfile: ../wordpress/Dockerfile
+    networks:
+      - reseauWP
+    ports:
+      - "${WORDPRESS_PORT}:88"
+    environment:
+      WORDPRESS_DB_HOST: ${WP_HOST}
+      WORDPRESS_DB_USER: ${WP_USER}
+      WORDPRESS_DB_PASSWORD: ${WP_PASSWORD}
+      WORDPRESS_DB_NAME: ${WP_DB_NAME}
+    healthcheck:
+      test: ["CMD", "mariadb-admin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    depends_on:
+      mariadb:
+        condition: service_healthy
   # <-------------------------------------- FIN
 
-#  phpmyadmin:
-#    networks:
-#      - reseauWP
+  phpmyadmin:
+    image: phpmyadmin
+    networks:
+      - reseauWP
+    ports:
+      - "${PHPMYADMIN_PORT}:88"
   # <-------------------------------------- FIN

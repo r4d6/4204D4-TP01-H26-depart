@@ -5,5 +5,21 @@
 # Utilise le volume dockmon-data pour stocker les données
 # ===================================================================================
 
-#services:
-#  dockmon:
+services:
+  dockmon:
+    image: darthnorse/dockmon:latest
+    container_name: dockmon
+    restart: unless-stopped
+    ports:
+      - "${DOCKMON_PORT}:443"
+    environment:
+      - TZ=America/New_York
+    volumes:
+      - ../volumes/dockmon_data:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    healthcheck:
+      test: ["CMD", "curl", "-k", "-f", "https://localhost:443/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+

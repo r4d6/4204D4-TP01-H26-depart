@@ -11,5 +11,19 @@
 # Et redémmarer le conteneur après avoir changé le mot de passe.
 # --------------------------------------------------------------
 
-#services:
-#  qbittorrent:
+services:
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - WEBUI_PORT=8080
+      - TORRENTING_PORT=6881
+    volumes:
+      - ../volumes/qbittorrent-data/appdata:/config
+    ports:
+      - ${QBITTORRENT_PORT}:8080
+    restart: unless-stopped
+
